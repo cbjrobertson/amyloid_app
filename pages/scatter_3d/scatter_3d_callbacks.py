@@ -30,6 +30,13 @@ def make_3d_scatter(
     symbol=None
 ):
     pdat = dataframe()
+    if topn:
+        pdat = pdat.sort_values(by="weight",ascending=False).\
+            groupby(["label","hash_id"]).\
+            head(topn).\
+            sort_values(by=["weight"],ascending=False).\
+            reset_index(drop=True,inplace=False)
+        
     if pos is not None:
         if isinstance(pos,str):
             pos = [pos]
@@ -44,12 +51,7 @@ def make_3d_scatter(
             pdat["weight_norm"] = _norm_data(pdat.weight.tolist(),smooth)
             symbol="alt_pos"
             make_comb = True
-    if topn:
-        pdat = pdat.sort_values(by="weight",ascending=False).\
-            groupby(["label","hash_id"]).\
-            head(topn).\
-            sort_values(by=["weight"],ascending=False).\
-            reset_index(drop=True,inplace=False)
+
         
     title="3D scatter in RoBERTa output layer vector space, weighted (dot size) by LIME weights"
      # make friendly labels

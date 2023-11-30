@@ -34,12 +34,15 @@ logger.addHandler(file_handler)
         Input("barword-pos", "value"),
         Input("barword-topn", "value"),
         Input("barword-target", "value"),
+        Input("barword-agg_meth", "value"),
     ],
 )
-def make_barword(pos,
-                  topn,
-                  target,
-                 ):
+def make_barword(
+    pos,
+    topn,
+    target,
+    agg_meth
+):
     # Load data
     df = dataframe()
     
@@ -57,8 +60,8 @@ def make_barword(pos,
     #aggregate
     dz = df\
         .groupby(mean_cols)\
-        .agg(mean_weight=("weight","mean"))\
-        .sort_values(by="mean_weight",ascending=False)\
+        .agg(agg_weight=("weight",agg_meth))\
+        .sort_values(by="agg_weight",ascending=False)\
         .groupby(["token"])\
         .head(topn)\
         .reset_index(drop=False)
@@ -67,8 +70,8 @@ def make_barword(pos,
     
     dy = df\
         .groupby(mean_cols)\
-        .agg(mean_weight=("weight","mean"))\
-        .sort_values(by="mean_weight",ascending=True)\
+        .agg(agg_weight=("weight",agg_meth))\
+        .sort_values(by="agg_weight",ascending=True)\
         .groupby(["token"])\
         .head(topn)\
         .reset_index(drop=False)
@@ -86,10 +89,14 @@ def make_barword(pos,
     
     #title
     title = f"Top and bottom {topn} words for within the selected POS tags for {CAT_MAP[target]} people"
+    
+    # Add y var
+    dx[f"{agg_meth}_weight"] = dx.agg_weight
+    
     #return fig
     fig = px.bar(dx,
                  x=x,
-                 y="mean_weight",
+                 y=f"{agg_meth}_weight",
                  facet_row="direction",
                  color="direction",
                  category_orders={"direction": ["Positive weights", "Negative weights"]},

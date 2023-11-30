@@ -50,16 +50,22 @@ controls = dbc.Card(
                                       )
                         ]
                     ),
-                md=3),
+                md=2),
                 
-                # dbc.Col(
-                # dbc.FormGroup(
-                #     [
-                #         dbc.Label("Positive weights"),
-                #         daq.BooleanSwitch(id='barword-ascending', on=False)
-                #     ]
-                # ),
-                # md=3),
+                dbc.Col(
+                    dbc.FormGroup(
+                        [
+                            dbc.Label("Aggregation method"),
+                            dcc.Dropdown(id='barword-agg_meth',
+                                         options = [
+                                             {"label": "Mean", "value": "mean"}, 
+                                             {"label": "Sum", "value": "sum"},
+                                         ],
+                                         value="mean"
+                                      )
+                        ]
+                    ),
+                md=2)
                 
             ],
     ),
