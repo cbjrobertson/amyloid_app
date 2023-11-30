@@ -262,3 +262,115 @@
 >>>>>>>>>>
 
 
+2023-11-22 20:19:38,402 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-22 20:19:43,191 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-22 20:20:21,527 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-22 20:20:32,539 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-22 20:20:35,313 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-22 20:20:38,118 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-22 20:20:44,345 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-22 20:20:54,873 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-30 11:03:53,036 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:04:01,072 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:05:01,161 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:05:08,288 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:05:11,988 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:06:07,939 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:06:12,284 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:06:13,392 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:06:51,511 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-30 11:31:48,052 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:31:52,595 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:31:55,360 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:40:18,552 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:40:22,894 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:40:40,355 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:40:52,342 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-11-30 11:41:11,185 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-30 11:52:15,694 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-30 11:52:18,290 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_NEG
+>>>>>>>>>>
+
+
+2023-11-30 11:52:25,100 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+

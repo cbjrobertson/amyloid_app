@@ -103,5 +103,10 @@ def make_3d_scatter(
                    xaxis_title='',
                    yaxis_title='',
                    zaxis_title='')
-                  )
+                  )\
+    .update_layout(
+        hoverlabel=dict(
+            bgcolor="#d3d3d3"
+        )
+    )
     return fig
