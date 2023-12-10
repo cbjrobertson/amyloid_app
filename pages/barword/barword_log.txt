@@ -482,3 +482,11 @@
 >>>>>>>>>>
 
 
+2023-12-05 11:38:53,437 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2023-12-10 14:55:14,671 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+

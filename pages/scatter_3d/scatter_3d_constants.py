@@ -1,3 +1,5 @@
+import plotly.graph_objects as go
+
 HOVER_MAP = {'token': True,
              'lemma': True,
              'prediction': True,
@@ -34,3 +36,32 @@ NAME_MAP = {'ADJ': 'Adjectives',
              'EX': "Existential 'there'"}
 
 CAT_MAP = {"AMYLOID_NEG": "Amyloid negative", "AMYLOID_POS": "Amyloid positive"}
+
+# =============================================================================
+# NULL RESULTS
+# =============================================================================
+null_result = {
+    "layout": {
+        "font": go.layout.Font(
+            family="Helvetica",
+            color="#000000"),
+        "xaxis": {
+            "visible": False
+        },
+        "yaxis": {
+            "visible": False
+        },
+        "annotations": [
+            {
+                "text": "No matching data found",
+                "xref": "paper",
+                "yref": "paper",
+                "color": "#000000",
+                "showarrow": False,
+                "font": {
+                    "size": 28
+                }
+            }
+        ]
+    }
+}

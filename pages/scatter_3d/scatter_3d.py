@@ -1,6 +1,7 @@
 import dash_bootstrap_components as dbc
 from dash import dcc 
 from dash import html
+import dash_daq as daq
 
 from data.amyloid_data import dataframe
 from .scatter_3d_constants import NAME_MAP
@@ -30,13 +31,23 @@ controls = dbc.Card(
                     dbc.FormGroup(
                         [
                             dbc.Label("Top N examples"),
-                            dcc.Slider(1,20,1,
+                            dcc.Slider(1,10,1,
                                        value=3,
                                        id='3d_scatter-topn'
                                       )
                         ]
                     ),
-                md=3),
+                md=2),
+                
+                dbc.Col(
+                    dbc.FormGroup(
+                        [
+                            dbc.Label("Sub exclusive"),
+                            daq.BooleanSwitch(id='3d_scatter-sub_first',
+                                              on=True)
+                        ]
+                    ),
+                md=1),
                 
                 dbc.Col(
                     dbc.FormGroup(
@@ -66,7 +77,7 @@ controls = dbc.Card(
                 dbc.FormGroup(
                     [
                         dbc.Label("Text size"),
-                        dcc.Slider(10,50,2,
+                        dcc.Slider(10,50,5,
                                    value=12,
                                    id='3d_scatter-text_size'
                                   )

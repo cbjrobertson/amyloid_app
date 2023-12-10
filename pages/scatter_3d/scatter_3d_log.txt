@@ -1,0 +1,40 @@
+2023-12-05 11:22:07,100 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (32, 23)
+>>>>>>>>>>
+
+
+2023-12-05 11:22:13,219 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (43, 23)
+>>>>>>>>>>
+
+
+2023-12-05 11:22:14,265 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (11, 23)
+>>>>>>>>>>
+
+
+2023-12-05 11:22:15,889 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (179, 23)
+>>>>>>>>>>
+
+
+2023-12-05 11:22:17,545 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (69, 23)
+>>>>>>>>>>
+
+
+2023-12-05 11:22:18,694 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (1, 23)
+>>>>>>>>>>
+
+
+2023-12-05 11:23:35,124 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (32, 23)
+>>>>>>>>>>
+
+
+2023-12-05 11:23:41,172 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (43, 23)
+>>>>>>>>>>
+
+
+2023-12-05 11:23:43,265 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (11, 23)
+>>>>>>>>>>
+
+
+2023-12-05 11:23:46,585 : WARNING : pages.scatter_3d.scatter_3d_callbacks : pdat shape was (1, 23)
+>>>>>>>>>>
+
+
