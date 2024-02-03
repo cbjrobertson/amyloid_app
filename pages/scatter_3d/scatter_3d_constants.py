@@ -1,18 +1,15 @@
 import plotly.graph_objects as go
 
-HOVER_MAP = {'token': True,
-             'lemma': True,
-             'prediction': True,
-             'subtype': True,
-             'amyloid_detail': False,
-             'csf': False,
-             'weight': True,
+HOVER_MAP = {'token': False,
+             'lemma': False,
+             'prediction': False,
+             'weight': False,
              'context': True,
              'weight_norm': False,
              'Y': False,
              'X': False,
              'Z': False,
-             'alt_pos': True}
+             'alt_pos': False}
 
 NAME_MAP = {'ADJ': 'Adjectives',
             'ADP': 'Adpositions',
@@ -33,9 +30,10 @@ NAME_MAP = {'ADJ': 'Adjectives',
              'VERB': 'Verbs',
              'X': 'other',
              'SPACE': 'spaces',
-             'EX': "Existential 'there'"}
+             'EX': "Existential 'there'",
+            "alt_pos": "Word type"}
 
-CAT_MAP = {"AMYLOID_NEG": "Amyloid negative", "AMYLOID_POS": "Amyloid positive"}
+CAT_MAP = {"0-low-CTR": "Low-CTR", "1-high-CTR": "High CTR"}
 
 # =============================================================================
 # NULL RESULTS

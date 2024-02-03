@@ -490,3 +490,119 @@
 >>>>>>>>>>
 
 
+2024-02-03 10:10:14,504 : WARNING : pages.barword.barword_callbacks : target was AMYLOID_POS
+>>>>>>>>>>
+
+
+2024-02-03 10:11:11,214 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:11:27,837 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:11:38,432 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:11:47,842 : WARNING : pages.barword.barword_callbacks : target was 0-low-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:11:56,980 : WARNING : pages.barword.barword_callbacks : target was None
+>>>>>>>>>>
+
+
+2024-02-03 10:18:10,466 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:18:15,454 : WARNING : pages.barword.barword_callbacks : target was None
+>>>>>>>>>>
+
+
+2024-02-03 10:18:17,643 : WARNING : pages.barword.barword_callbacks : target was 0-low-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:18:21,256 : WARNING : pages.barword.barword_callbacks : target was 0-low-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:18:21,764 : WARNING : pages.barword.barword_callbacks : target was 0-low-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:18:30,860 : WARNING : pages.barword.barword_callbacks : target was 0-low-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:18:33,146 : WARNING : pages.barword.barword_callbacks : target was 0-low-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:18:39,898 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:18:46,918 : WARNING : pages.barword.barword_callbacks : target was 0-low-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:18:57,485 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:19:14,076 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:19:16,929 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:19:34,862 : WARNING : pages.barword.barword_callbacks : target was 0-low-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:20:41,221 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:22:41,613 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:41:49,537 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:43:05,004 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:44:11,266 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:45:50,474 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:45:54,940 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:45:57,970 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:46:02,082 : WARNING : pages.barword.barword_callbacks : target was 1-high-CTR
+>>>>>>>>>>
+
+
+2024-02-03 10:46:08,149 : WARNING : pages.barword.barword_callbacks : target was 0-low-CTR
+>>>>>>>>>>
+
+

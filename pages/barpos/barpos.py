@@ -13,7 +13,7 @@ controls = dbc.Card(
                 dbc.Col(
                 dbc.FormGroup(
                     [
-                        dbc.Label("Part of speech"),
+                        dbc.Label("Word type"),
                         dcc.Dropdown(
                             id="barpos-y_var",
                             options=  [

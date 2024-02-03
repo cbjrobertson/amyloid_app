@@ -22,8 +22,8 @@ def make_barpos(
     df["alt_pos"] = df.alt_pos.apply(lambda pos: NAME_MAP[pos])
     
     #title
-    title = f"Part-of-speech tags ranked by agggregated weight: {AGG_MAP[y_var]}"
-    _map = {**{"AMYLOID_NEG": "Negative", "AMYLOID_POS": "Positive"},**{"alt_pos": "Part of speech"}}
+    title = f"Word type ranked by: {AGG_MAP[y_var]}"
+    _map = {**{"0-low-CTR": "Low-CTR", "1-high-CTR": "High CTR"},**{"alt_pos": "Word type", "weight_prod": "Product impact score", "weight_mean": "Mean of impact score", "weight_sum": "Sum of impact score"}}
 
     #return fig
     fig = px.bar(df,
@@ -31,7 +31,7 @@ def make_barpos(
                  y=y_var,
                  facet_row="label",
                  color="label",
-                 category_orders={"label": ["AMYLOID_POS", "AMYLOID_NEG"]},
+                 category_orders={"label": ["1-high-CTR", "0-low-CTR"]},
                  facet_row_spacing=0.125,
                  labels=_map
                 )\
@@ -44,7 +44,7 @@ def make_barpos(
                              ),
                    legend=dict(
                        font=dict(size=14),
-                       title=dict(text="Amyloid status", font=dict(size=16))
+                       title=dict(text="CTR", font=dict(size=16))
                    )
                   )\
     .for_each_trace(lambda t: t.update(name = _map[t.name],

@@ -65,7 +65,7 @@ def make_barword(
         .groupby(["token"])\
         .head(topn)\
         .reset_index(drop=False)
-    dz["direction"] = "Positive weights"
+    dz["direction"] = "Positive impact"
     dz = dz.iloc[:topn,:]
     
     dy = df\
@@ -75,7 +75,7 @@ def make_barword(
         .groupby(["token"])\
         .head(topn)\
         .reset_index(drop=False)
-    dy["direction"] = "Negative weights"
+    dy["direction"] = "Negative impact"
     dy = dy.iloc[:topn,:]
     
     #combine
@@ -88,18 +88,21 @@ def make_barword(
         x = "comb_token"
     
     #title
-    title = f"Top and bottom {topn} words for within the selected POS tags for {CAT_MAP[target]} people"
+    title = f"Top and bottom {topn} words for within the selected word types tags for {CAT_MAP[target]}"
     
     # Add y var
     dx[f"{agg_meth}_weight"] = dx.agg_weight
     
+    #change token name 
+    dx["Word"] = dx[x]
+    
     #return fig
     fig = px.bar(dx,
-                 x=x,
+                 x="Word",
                  y=f"{agg_meth}_weight",
                  facet_row="direction",
                  color="direction",
-                 category_orders={"direction": ["Positive weights", "Negative weights"]},
+                 category_orders={"direction": ["Positive impact", "Negative impact"]},
                  facet_row_spacing=0.08
                 )\
     .update_layout(autosize=True,height=1000)\
@@ -111,7 +114,7 @@ def make_barword(
                              ),
                    legend=dict(
                        font=dict(size=14),
-                       title=dict(text="Weight direction", font=dict(size=16))
+                       title=dict(text="Impact direction", font=dict(size=16))
                    )
                   )
     return fig

@@ -13,7 +13,7 @@ controls = dbc.Card(
                 dbc.Col(
                 dbc.FormGroup(
                     [
-                        dbc.Label("Part of speech"),
+                        dbc.Label("Word type"),
                         dcc.Dropdown(
                             id="barword-pos",
                             options= [{"label": "All", "value": ""}] + [
@@ -29,7 +29,7 @@ controls = dbc.Card(
                 dbc.Col(
                     dbc.FormGroup(
                         [
-                            dbc.Label("Top N examples"),
+                            dbc.Label("Number of words"),
                             dcc.Slider(0,40,5,
                                        value=20,
                                        id='barword-topn'
@@ -41,12 +41,12 @@ controls = dbc.Card(
                 dbc.Col(
                     dbc.FormGroup(
                         [
-                            dbc.Label("Amyloid status"),
+                            dbc.Label("CTR category"),
                             dcc.Dropdown(id='barword-target',
                                          options = [
                                              {"label": CAT_MAP[key], "value": key} for key in CAT_MAP
                                          ],
-                                         value="AMYLOID_POS"
+                                         value="1-high-CTR"
                                       )
                         ]
                     ),

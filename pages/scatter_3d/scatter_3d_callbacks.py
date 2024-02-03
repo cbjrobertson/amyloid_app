@@ -39,7 +39,6 @@ def _norm_data(data,smooth):
         Input("3d_scatter-smooth", "value"),
         Input("3d_scatter-max_size", "value"),
         Input("3d_scatter-text_size", "value"),
-        Input("3d_scatter-sub_first", "on")
     ],
 )
 def make_3d_scatter(
@@ -48,14 +47,14 @@ def make_3d_scatter(
     smooth,
     max_size,
     text_size,
-    sub_first,
+    sub_first=True,
     symbol=None
 ):
     pdat = dataframe()
     if sub_first:
         if topn:
             pdat = pdat.sort_values(by="weight",ascending=False).\
-                groupby(["label","hash_id"]).\
+                groupby(["label","asset_id"]).\
                 head(topn).\
                 sort_values(by=["weight"],ascending=False).\
                 reset_index(drop=True,inplace=False)
@@ -77,22 +76,23 @@ def make_3d_scatter(
     if not sub_first:
         if topn:
             pdat = pdat.sort_values(by="weight",ascending=False).\
-                groupby(["label","hash_id"]).\
+                groupby(["label","asset_id"]).\
                 head(topn).\
                 sort_values(by=["weight"],ascending=False).\
                 reset_index(drop=True,inplace=False)
 
         
-    title="3D scatter in RoBERTa output layer vector space, weighted (dot size) by LIME weights"
+    title="Top performing words broken down by word type (bigger bubbles means more impact)"
      # make friendly labels
     if make_comb:
         comb_map = {f"{cat}, {pos}":f"{cat_val}: {val}" for cat,cat_val in CAT_MAP.items() for pos,val in NAME_MAP.items()}
     else:
-        comb_map = {**NAME_MAP,**{"AMYLOID_NEG": "Negative", "AMYLOID_POS": "Positive"}}
+        comb_map = {**NAME_MAP,**{"0-low-CTR": "Low CTR", "1-high-CTR": "High CTR"}}
     # catch null queries
     if pdat.shape[0] <= 1:
         return null_result
     # logger.warning(f"pdat shape was {pdat.shape}\n>>>>>>>>>>\n\n")
+    label_map = {**{"0-low-CTR": "Low-CTR", "1-high-CTR": "High CTR"},**{"alt_pos": "Word type", "lemma": "Word", "weight": "Impact score"}}
     # pdat.to_pickle("test.pkl")
     #make fig
     fig = px.scatter_3d(
@@ -106,9 +106,9 @@ def make_3d_scatter(
         symbol=symbol,
         size_max=max_size,
         opacity=.6,
-        category_orders={"label": ["AMYLOID_NEG", "AMYLOID_POS"]},
-        hover_data=HOVER_MAP)\
-    .for_each_trace(lambda t: t.update(textfont_color=t.marker.color, textposition='top center'))\
+        category_orders={"label": ["1-high-CTR", "0-low-CTR"]},
+        hover_data=HOVER_MAP
+    ).for_each_trace(lambda t: t.update(textfont_color=t.marker.color, textposition='top center'))\
     .for_each_trace(lambda t: t.update(name = comb_map[t.name],
                                   legendgroup = comb_map[t.name],
                                   hovertemplate = t.hovertemplate.replace(t.name, comb_map[t.name])
@@ -129,7 +129,7 @@ def make_3d_scatter(
                              ),
                    legend=dict(
                        font=dict(size=14),
-                       title=dict(text="Amyloid status", font=dict(size=16))
+                       title=dict(text="CTR", font=dict(size=16))
                    )
                   )\
     .update_layout(scene=dict(

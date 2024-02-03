@@ -20,7 +20,7 @@ NAME_MAP = {'ADJ': 'Adjectives',
              'EX': "Existential 'there'"}
 
 AGG_MAP = {
-    "weight_sum": "Sum of abs(weight) per POS",
-    "weight_mean": "Mean of abs(weight) per POS",
-    "weight_prod": "Product of sum and mean of abs(weight) per prod"
+    "weight_sum": "Sum of impact score per word type",
+    "weight_mean": "Mean of the impact score per word type",
+    "weight_prod": "Product of sum and mean of the impact score per word type"
 }

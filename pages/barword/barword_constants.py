@@ -1,9 +1,6 @@
 HOVER_MAP = {'token': True,
              'lemma': True,
              'prediction': True,
-             'subtype': True,
-             'amyloid_detail': False,
-             'csf': False,
              'weight': True,
              'context': True,
              'weight_norm': False,
@@ -33,4 +30,4 @@ NAME_MAP = {'ADJ': 'Adjectives',
              'SPACE': 'spaces',
              'EX': "Existential 'there'"}
 
-CAT_MAP = {"AMYLOID_NEG": "Amyloid negative", "AMYLOID_POS": "Amyloid positive"}
+CAT_MAP = {"0-low-CTR": "Low-CTR", "1-high-CTR": "High CTR"}

@@ -14,7 +14,7 @@ controls = dbc.Card(
                 dbc.Col(
                 dbc.FormGroup(
                     [
-                        dbc.Label("Part of speech"),
+                        dbc.Label("Word type"),
                         dcc.Dropdown(
                             id="3d_scatter-pos",
                             options=[
@@ -30,7 +30,7 @@ controls = dbc.Card(
                 dbc.Col(
                     dbc.FormGroup(
                         [
-                            dbc.Label("Top N examples"),
+                            dbc.Label("Number of examples"),
                             dcc.Slider(1,10,1,
                                        value=3,
                                        id='3d_scatter-topn'
@@ -42,17 +42,7 @@ controls = dbc.Card(
                 dbc.Col(
                     dbc.FormGroup(
                         [
-                            dbc.Label("Sub exclusive"),
-                            daq.BooleanSwitch(id='3d_scatter-sub_first',
-                                              on=True)
-                        ]
-                    ),
-                md=1),
-                
-                dbc.Col(
-                    dbc.FormGroup(
-                        [
-                            dbc.Label("Smoothing factor (LIME weights)"),
+                            dbc.Label("Smoothing factor (bubble size)"),
                             dcc.Slider(1,10,1,
                                        value=5,
                                        id='3d_scatter-smooth'
@@ -64,7 +54,7 @@ controls = dbc.Card(
                 dbc.Col(
                 dbc.FormGroup(
                     [
-                        dbc.Label("Max point size"),
+                        dbc.Label("Max bubble size"),
                         dcc.Slider(0,150,25,
                                    value=75,
                                    id='3d_scatter-max_size'
